@@ -13,6 +13,15 @@
 		2ECB05681F1DEC6700278EE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ECB05661F1DEC6700278EE9 /* Main.storyboard */; };
 		2ECB056A1F1DEC6700278EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ECB05691F1DEC6700278EE9 /* Assets.xcassets */; };
 		2ECB056D1F1DEC6700278EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ECB056B1F1DEC6700278EE9 /* LaunchScreen.storyboard */; };
+		2ECB057C1F1DF62400278EE9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB057B1F1DF62400278EE9 /* LoginViewController.m */; };
+		2ECB057F1F1E069D00278EE9 /* QBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB057E1F1E069D00278EE9 /* QBTextField.m */; };
+		2ECB05851F1EE50200278EE9 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB05841F1EE50200278EE9 /* UIColor+Hex.m */; };
+		2ECB05901F1F341C00278EE9 /* AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB058F1F1F341C00278EE9 /* AppColor.m */; };
+		2ECB05951F204E3400278EE9 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB05941F204E3400278EE9 /* LoginViewModel.m */; };
+		2ECB05981F205B5B00278EE9 /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB05971F205B5B00278EE9 /* AuthViewController.m */; };
+		2ECB059D1F205CA400278EE9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB059C1F205CA400278EE9 /* BaseViewController.m */; };
+		2ECB05A01F207FC200278EE9 /* UserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB059F1F207FC200278EE9 /* UserViewModel.m */; };
+		436D622F79C713D207647FC8 /* Pods_Switchover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F429D2EB2CCC4591D55FF038 /* Pods_Switchover.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,25 @@
 		2ECB05691F1DEC6700278EE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ECB056C1F1DEC6700278EE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ECB056E1F1DEC6700278EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ECB057A1F1DF62400278EE9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2ECB057B1F1DF62400278EE9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2ECB057D1F1E069D00278EE9 /* QBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBTextField.h; sourceTree = "<group>"; };
+		2ECB057E1F1E069D00278EE9 /* QBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBTextField.m; sourceTree = "<group>"; };
+		2ECB05831F1EE50200278EE9 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		2ECB05841F1EE50200278EE9 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		2ECB058E1F1F341C00278EE9 /* AppColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppColor.h; sourceTree = "<group>"; };
+		2ECB058F1F1F341C00278EE9 /* AppColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppColor.m; sourceTree = "<group>"; };
+		2ECB05931F204E3400278EE9 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		2ECB05941F204E3400278EE9 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		2ECB05961F205B5B00278EE9 /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
+		2ECB05971F205B5B00278EE9 /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
+		2ECB059B1F205CA400278EE9 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		2ECB059C1F205CA400278EE9 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		2ECB059E1F207FC200278EE9 /* UserViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewModel.h; sourceTree = "<group>"; };
+		2ECB059F1F207FC200278EE9 /* UserViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewModel.m; sourceTree = "<group>"; };
+		BF63F9F5190223DB348902A5 /* Pods-Switchover.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Switchover.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Switchover/Pods-Switchover.debug.xcconfig"; sourceTree = "<group>"; };
+		F03A3540C584093F0DEC5815 /* Pods-Switchover.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Switchover.release.xcconfig"; path = "Pods/Target Support Files/Pods-Switchover/Pods-Switchover.release.xcconfig"; sourceTree = "<group>"; };
+		F429D2EB2CCC4591D55FF038 /* Pods_Switchover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Switchover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +61,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436D622F79C713D207647FC8 /* Pods_Switchover.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E57B6C7408743342B4864B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F429D2EB2CCC4591D55FF038 /* Pods_Switchover.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2ECB05511F1DEC6700278EE9 = {
 			isa = PBXGroup;
 			children = (
 				2ECB055C1F1DEC6700278EE9 /* Switchover */,
 				2ECB055B1F1DEC6700278EE9 /* Products */,
+				84E5D2D4D20EAFB1868EF6A1 /* Pods */,
+				0E57B6C7408743342B4864B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +97,12 @@
 		2ECB055C1F1DEC6700278EE9 /* Switchover */ = {
 			isa = PBXGroup;
 			children = (
+				2ECB05A11F2083E100278EE9 /* Networking */,
+				2ECB05861F1F325C00278EE9 /* Config */,
+				2ECB05771F1DF4B100278EE9 /* Helpers */,
+				2ECB05761F1DF4A900278EE9 /* Controllers */,
+				2ECB05751F1DF4A200278EE9 /* Views */,
+				2ECB05741F1DF49900278EE9 /* Models */,
 				2ECB05601F1DEC6700278EE9 /* AppDelegate.h */,
 				2ECB05611F1DEC6700278EE9 /* AppDelegate.m */,
 				2ECB05631F1DEC6700278EE9 /* ViewController.h */,
@@ -79,6 +124,121 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2ECB05741F1DF49900278EE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2ECB05931F204E3400278EE9 /* LoginViewModel.h */,
+				2ECB05941F204E3400278EE9 /* LoginViewModel.m */,
+				2ECB059E1F207FC200278EE9 /* UserViewModel.h */,
+				2ECB059F1F207FC200278EE9 /* UserViewModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2ECB05751F1DF4A200278EE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2ECB05921F20371100278EE9 /* page */,
+				2ECB05911F2036FA00278EE9 /* common */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2ECB05761F1DF4A900278EE9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2ECB059A1F205C8B00278EE9 /* base */,
+				2ECB05791F1DF5CC00278EE9 /* user */,
+				2ECB05781F1DF5A700278EE9 /* main */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2ECB05771F1DF4B100278EE9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2ECB05831F1EE50200278EE9 /* UIColor+Hex.h */,
+				2ECB05841F1EE50200278EE9 /* UIColor+Hex.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2ECB05781F1DF5A700278EE9 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				2ECB05991F205B6C00278EE9 /* Auth */,
+				2ECB057A1F1DF62400278EE9 /* LoginViewController.h */,
+				2ECB057B1F1DF62400278EE9 /* LoginViewController.m */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		2ECB05791F1DF5CC00278EE9 /* user */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = user;
+			sourceTree = "<group>";
+		};
+		2ECB05861F1F325C00278EE9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2ECB058E1F1F341C00278EE9 /* AppColor.h */,
+				2ECB058F1F1F341C00278EE9 /* AppColor.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		2ECB05911F2036FA00278EE9 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				2ECB057E1F1E069D00278EE9 /* QBTextField.m */,
+				2ECB057D1F1E069D00278EE9 /* QBTextField.h */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		2ECB05921F20371100278EE9 /* page */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = page;
+			sourceTree = "<group>";
+		};
+		2ECB05991F205B6C00278EE9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2ECB05971F205B5B00278EE9 /* AuthViewController.m */,
+				2ECB05961F205B5B00278EE9 /* AuthViewController.h */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		2ECB059A1F205C8B00278EE9 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				2ECB059B1F205CA400278EE9 /* BaseViewController.h */,
+				2ECB059C1F205CA400278EE9 /* BaseViewController.m */,
+			);
+			name = base;
+			sourceTree = "<group>";
+		};
+		2ECB05A11F2083E100278EE9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		84E5D2D4D20EAFB1868EF6A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF63F9F5190223DB348902A5 /* Pods-Switchover.debug.xcconfig */,
+				F03A3540C584093F0DEC5815 /* Pods-Switchover.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2ECB05711F1DEC6700278EE9 /* Build configuration list for PBXNativeTarget "Switchover" */;
 			buildPhases = (
+				FEB324805C1F5C231DB1A60A /* [CP] Check Pods Manifest.lock */,
 				2ECB05561F1DEC6700278EE9 /* Sources */,
 				2ECB05571F1DEC6700278EE9 /* Frameworks */,
 				2ECB05581F1DEC6700278EE9 /* Resources */,
+				544A3E334B26B45E66F92E4D /* [CP] Embed Pods Frameworks */,
+				9FC9FD58169A7C39A1E3BE2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,14 +309,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		544A3E334B26B45E66F92E4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Switchover/Pods-Switchover-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC9FD58169A7C39A1E3BE2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Switchover/Pods-Switchover-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEB324805C1F5C231DB1A60A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2ECB05561F1DEC6700278EE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ECB05951F204E3400278EE9 /* LoginViewModel.m in Sources */,
+				2ECB059D1F205CA400278EE9 /* BaseViewController.m in Sources */,
+				2ECB057C1F1DF62400278EE9 /* LoginViewController.m in Sources */,
+				2ECB05851F1EE50200278EE9 /* UIColor+Hex.m in Sources */,
 				2ECB05651F1DEC6700278EE9 /* ViewController.m in Sources */,
+				2ECB05981F205B5B00278EE9 /* AuthViewController.m in Sources */,
+				2ECB05901F1F341C00278EE9 /* AppColor.m in Sources */,
+				2ECB057F1F1E069D00278EE9 /* QBTextField.m in Sources */,
 				2ECB05621F1DEC6700278EE9 /* AppDelegate.m in Sources */,
 				2ECB055F1F1DEC6700278EE9 /* main.m in Sources */,
+				2ECB05A01F207FC200278EE9 /* UserViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,25 +490,31 @@
 		};
 		2ECB05721F1DEC6700278EE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF63F9F5190223DB348902A5 /* Pods-Switchover.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UR854Y6UR7;
 				INFOPLIST_FILE = Switchover/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = walkbydream.Switchover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 			};
 			name = Debug;
 		};
 		2ECB05731F1DEC6700278EE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F03A3540C584093F0DEC5815 /* Pods-Switchover.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UR854Y6UR7;
 				INFOPLIST_FILE = Switchover/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = walkbydream.Switchover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 			};
 			name = Release;
 		};
@@ -312,6 +537,7 @@
 				2ECB05731F1DEC6700278EE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
