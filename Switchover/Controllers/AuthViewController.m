@@ -7,10 +7,12 @@
 //
 
 #import "AuthViewController.h"
+#import "CompleteInfoViewController.h"
 #import "UserViewModel.h"
 #import "UIColor+Hex.h"
 #import "AppColor.h"
 #import "ReactiveObjC.h"
+#import "MBProgressHUD.h"
 
 @interface AuthViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -78,7 +80,37 @@
 
 - (IBAction)authIdentity:(UIButton *)sender {
     
-//    self.userViewModel
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    
+    
+    [self performSegueWithIdentifier:@"completeInfo" sender: self];
+//    [self.userViewModel authenticate:^(id  _Nullable responseObject) {
+//        
+////        NSLog(@"result %@", responseObject[@"status"]);
+//        if ([responseObject[@"status"] intValue] == 0) {
+//            
+//            hud.label.text = @"认证成功";
+//        } else {
+//            hud.label.text = responseObject[@"msg"];
+//        }
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            
+//            [NSThread sleepForTimeInterval:1];
+//            [hud hideAnimated:YES];
+//            if ([responseObject[@"status"] intValue] == 0) {
+////                CompleteInfoViewController *completeInfoController = [[CompleteInfoViewController alloc] init];
+////                [self.navigationController pushViewController: completeInfoController  animated:YES];
+//                
+//                [self performSegueWithIdentifier:@"completeInfo" sender: self];
+//            }
+//            
+//        });
+//    
+//    } failure:^(NSError * _Nullable error) {
+//        NSLog(@"request fail %@", error);
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,14 +120,13 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+     
 }
-*/
+
 
 @end

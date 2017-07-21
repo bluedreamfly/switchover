@@ -11,10 +11,11 @@
 @interface UserViewModel : NSObject
 
 //用户名
-@property (nonatomic, strong, readwrite) NSString *name;
+@property (nonatomic, strong, readwrite) NSString * _Nullable name;
 //用户身份证卡号
-@property (nonatomic, strong, readwrite) NSString *cardNo;
+@property (nonatomic, strong, readwrite) NSString * _Nullable cardNo;
 
 //用户身份认证
--(void) authenticate;
+-(void) authenticate:(nullable void (^)(id _Nullable responseObject))success
+             failure:(nullable void (^)(NSError * _Nullable error))failure;
 @end

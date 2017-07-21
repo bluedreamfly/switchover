@@ -24,6 +24,7 @@
 }
 
 -(void) initView {
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.view.backgroundColor = [UIColor colorWithHexString: APP_MAIN_BGCOLOR];
 }
 

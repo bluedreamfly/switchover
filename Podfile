@@ -10,4 +10,5 @@ target 'Switchover' do
   pod 'Masonry'
 #  pod 'ReactiveCocoa', '~> 5.0.0'
   pod 'ReactiveObjC'
+  pod 'MBProgressHUD', '~> 1.0.0'
 end

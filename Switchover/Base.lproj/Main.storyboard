@@ -179,11 +179,52 @@
                         <outlet property="nameInput" destination="Acv-1t-AN0" id="r9F-65-X6Z"/>
                         <outlet property="nameLabel" destination="ad5-nf-MW7" id="uag-eE-ol6"/>
                         <outlet property="seperatorLine" destination="un5-uO-f7J" id="hTp-HH-aQk"/>
+                        <segue destination="wAd-EV-eO0" kind="show" identifier="completeInfo" id="xhY-GM-p2Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMQ-0p-Vdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1541.5999999999999" y="26.53673163418291"/>
+        </scene>
+        <!--Complete Info View Controller-->
+        <scene sceneID="SAC-HM-bSI">
+            <objects>
+                <viewController storyboardIdentifier="completeInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wAd-EV-eO0" customClass="CompleteInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zid-Bf-zGW"/>
+                        <viewControllerLayoutGuide type="bottom" id="DnJ-bK-Hbq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wqr-Gb-1gb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isV-JX-91J">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzb-b9-lAt">
+                                        <rect key="frame" x="136" y="167" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="isV-JX-91J" secondAttribute="trailing" id="HxV-fX-4BO"/>
+                            <constraint firstItem="isV-JX-91J" firstAttribute="leading" secondItem="Wqr-Gb-1gb" secondAttribute="leading" id="jM2-QH-J5M"/>
+                            <constraint firstItem="isV-JX-91J" firstAttribute="top" secondItem="zid-Bf-zGW" secondAttribute="bottom" id="uUU-JO-FO9"/>
+                            <constraint firstItem="DnJ-bK-Hbq" firstAttribute="top" secondItem="isV-JX-91J" secondAttribute="bottom" id="zt2-l0-27P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="isV-JX-91J" id="BRE-Ko-6Kd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nAi-sn-G40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2393" y="27"/>
         </scene>
     </scenes>
     <resources>
