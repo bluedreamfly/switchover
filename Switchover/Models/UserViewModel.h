@@ -18,4 +18,8 @@
 //用户身份认证
 -(void) authenticate:(nullable void (^)(id _Nullable responseObject))success
              failure:(nullable void (^)(NSError * _Nullable error))failure;
+
+
+-(void) upload: (NSData *_Nullable)imageData success: (nullable void (^)(id _Nullable responseObject))success
+             failure:(nullable void (^)(NSError * _Nullable error))failure;
 @end

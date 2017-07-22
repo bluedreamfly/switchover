@@ -7,9 +7,10 @@
 //
 
 #import "ImagePickerViewController.h"
+#import "UserViewModel.h"
 
 @interface ImagePickerViewController ()
-  
+@property (strong, nonatomic) UserViewModel *userViewModel;
 @end
 
 @implementation ImagePickerViewController
@@ -51,8 +52,8 @@
 {
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-//    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     picker.delegate = self;
     //设置选择后的图片可被编辑
     picker.allowsEditing = YES;
@@ -64,6 +65,16 @@
     NSLog(@"info %@", info);
     
     [self.parentCon dismissViewControllerAnimated:YES completion:nil];
+    
+    self.userViewModel = [[UserViewModel alloc] init];
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+    [self.userViewModel upload:imageData success:^(id  _Nullable responseObject) {
+        NSLog(@"result success %@", responseObject);
+    } failure:^(NSError * _Nullable error) {
+        NSLog(@"result failure %@", error);
+    }];
     
 }
 

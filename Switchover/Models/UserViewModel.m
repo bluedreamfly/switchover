@@ -20,6 +20,8 @@
                               @"cardNo": self.cardNo
                               };
     
+    
+    
     [session POST:@"http://api.test.com/user/auth" parameters:paramas progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -29,7 +31,28 @@
         failure(error);
     }];
     
+}
+
+-(void) upload:(NSData *)imageData success:(void (^)(id _Nullable))success failure:(void (^)(NSError * _Nullable))failure {
     
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     
+    NSLog(@"upload imageDATA %@", imageData);
+    
+    [session POST:@"http://api.test.com/upload" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyyMMddHHmmss"];
+        NSString *dateString = [formatter stringFromDate:[NSDate date]];
+        NSString *fileName = [NSString  stringWithFormat:@"%@.jpg", dateString];
+        
+        
+        [formData appendPartWithFileData:imageData name:@"upload" fileName:fileName mimeType:@"image/jpeg"];
+        
+    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+
 }
 @end
