@@ -23,10 +23,20 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+
+    [self.navigationController.navigationBar setBarTintColor: [UIColor whiteColor]];
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+}
+
 -(void) initView {
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [self.navigationController.navigationBar setBarTintColor: [UIColor whiteColor]];
     self.view.backgroundColor = [UIColor colorWithHexString: APP_MAIN_BGCOLOR];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
