@@ -33,11 +33,33 @@
     
 }
 
+-(void) checkAuth:(void (^)(id _Nullable))success failure:(void (^)(NSError * _Nullable))failure {
+    
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    
+    NSDictionary *paramas = @{
+                              @"city_name": self.city.name,
+                              @"card_front": self.cardFrontImage,
+                              @"card_back": self.cardBackImage,
+                              @"card_person": self.cardPersonImage
+                              };
+    
+    [session POST:@"http://api.test.com/user/check" parameters:paramas progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+
+}
+
 -(void) upload:(NSData *)imageData success:(void (^)(id _Nullable))success failure:(void (^)(NSError * _Nullable))failure {
     
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     
-    NSLog(@"upload imageDATA %@", imageData);
+//    NSLog(@"upload imageDATA %@", imageData);
     
     [session POST:@"http://api.test.com/upload" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

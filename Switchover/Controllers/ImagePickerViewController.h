@@ -14,5 +14,8 @@
 @property (strong, nonatomic)  UIActionSheet *actionSheet;
 @property (strong, nonatomic)  UIViewController *parentCon;
 
--(void) open;
+-(void)open;
+
+-(void)close;
+-(void)setCallback: (void (^)(id responseObject))success failure:(void (^)(NSError* error))failure;
 @end

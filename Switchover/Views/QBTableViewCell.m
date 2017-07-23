@@ -52,9 +52,9 @@
     //图片上传
     self.uploadBtn = [[UIButton alloc] init];
     self.uploadBtn.backgroundColor = [UIColor colorWithHexString:LOGIN_LEFTVIEW_BGCOLOR];
-    self.uploadImageView = [[UIImageView alloc] init];
-    self.uploadImageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.uploadBtn addSubview:self.uploadImageView];
+    self.uploadBtn.imageView.contentMode = UIViewContentModeCenter;
+    self.uploadBtn.imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    self.uploadBtn.imageView.clipsToBounds = YES;
     
     //参考范例
     UILabel *tipLalel = [[UILabel alloc] init];
@@ -103,9 +103,13 @@
         make.width.equalTo(imageWrap.mas_width);
     }];
     
-    [self.uploadImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.uploadBtn.mas_centerX);
-        make.centerY.equalTo(self.uploadBtn.mas_centerY);
+    [self.uploadBtn.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.equalTo(self.uploadBtn.mas_centerX);
+//        make.centerY.equalTo(self.uploadBtn.mas_centerY);
+        make.top.equalTo(self.uploadBtn.mas_top);
+        make.leading.equalTo(self.uploadBtn.mas_leading);
+        make.width.equalTo(self.uploadBtn.mas_width);
+        make.height.equalTo(self.uploadBtn.mas_height);
     }];
     
     [tipLalel mas_makeConstraints:^(MASConstraintMaker *make) {

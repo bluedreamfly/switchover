@@ -14,6 +14,9 @@
 #import "SelectCityViewController.h"
 #import "ReactiveObjC.h"
 #import "ImagePickerViewController.h"
+#import "UserViewModel.h"
+#import "CheckViewController.h"
+#import "CheckFailureViewController.h"
 
 @interface CompleteInfoViewController () 
 @property (weak, nonatomic) IBOutlet UIView *container;
@@ -24,6 +27,8 @@
 
 @property (strong, nonatomic)  UIActionSheet *actionSheet;
 @property (strong, nonatomic)  ImagePickerViewController *imagePicker;
+@property (strong, nonatomic)  UserViewModel *userViewModel;
+
 
 @end
 
@@ -40,7 +45,7 @@
     
     [self bindEvent];
     
-//    [self initRAC];
+    [self initRAC];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -55,6 +60,7 @@
     
     if (self.city.name != nil) {
         self.cityLabel.text = self.city.name;
+        self.userViewModel.city = self.city;
     }
 
 }
@@ -62,6 +68,30 @@
 -(void) bindEvent {
 
     [self.selectCityBtn addTarget:self action:@selector(selectCity) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.checkBtn addTarget:self action:@selector(checkUser) forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+-(void) checkUser {
+   
+    [self.userViewModel checkAuth:^(id  _Nullable responseObject) {
+        NSLog(@"checkUser %@", responseObject);
+        if ([responseObject[@"status"] intValue] == 0) {
+//            CheckViewController *checkController = [[CheckViewController alloc] init];
+            
+            CheckViewController *checkController =  [self.storyboard instantiateViewControllerWithIdentifier:@"checking"];
+            
+            CheckFailureViewController *checkFailure = [
+                                                        self.storyboard instantiateViewControllerWithIdentifier:@"checkFailure"];
+            
+            
+            [self.navigationController pushViewController:checkFailure animated:YES];
+        }
+    } failure:^(NSError * _Nullable error) {
+        
+    }];
+
 }
 
 -(void) selectCity {
@@ -96,21 +126,39 @@
 
 }
 
-//-(void)initRAC {
-//    RACSignal *city = RACObserve(self.city, name);
-//    
+-(void)initRAC {
+    
+    self.userViewModel = [[UserViewModel alloc] init];
+    
+    RACSignal *city = RACObserve(self.userViewModel, city);
+//    self.userViewModel.cardPersonImage
+    RACSignal *cardFront = RACObserve(self.userViewModel, cardFrontImage);
+    RACSignal *cardBack = RACObserve(self.userViewModel, cardBackImage);
+    RACSignal *cardPerson = RACObserve(self.userViewModel, cardPersonImage);
+    
+    [[RACSignal merge:@[city, cardFront, cardBack, cardPerson]] subscribeNext:^(id  _Nullable x) {
+        if (self.userViewModel.city != nil &&
+            self.userViewModel.cardFrontImage != nil &&
+            self.userViewModel.cardBackImage != nil &&
+            self.userViewModel.cardPersonImage != nil) {
+            
+//            NSLog(@"initRAC%@", x);
+            
+            self.checkBtn.enabled = YES;
+            self.checkBtn.alpha = 1;
+            
+        }
+    }];
 //    [city subscribeNext:^(id  _Nullable x) {
 //        NSLog(@"initRAC%@", x);
 //    }];
 //    
-//    
-//}
-
-//-(void) setMycity: (CityViewModel*)city {
-//    self.city = city;
-//    self.cityLabel.text = city.name;
-//}
-
+//    [cardFront subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"initRAC%@", x);
+//    }];
+    
+    
+}
 
 
 -(void)initCodeView {
@@ -151,6 +199,7 @@
     self.checkBtn.backgroundColor = [UIColor colorWithHexString: APP_MAIN_COLOR];
     self.checkBtn.layer.cornerRadius = 3;
     self.checkBtn.alpha = 0.45;
+    self.checkBtn.enabled = NO;
     
     [btn addSubview:position];
     [btn addSubview:imageView];
@@ -252,7 +301,8 @@
     if (indexPath.row < 2) {
         cell.referenceImgView.transform = CGAffineTransformMakeScale(0.8, 0.8);
     }
-    cell.uploadImageView.image = [UIImage imageNamed:@"image_picker"];
+    [cell.uploadBtn setImage:[UIImage imageNamed:@"image_picker"] forState:UIControlStateNormal];
+//    cell.uploadImageView.image = [UIImage imageNamed:@"image_picker"];
 //    cell.uploadImageView.image = [UIImage imageNamed:@"person_card"];
     cell.referenceImgView.image = [UIImage imageNamed:dataArray[indexPath.row][@"imageName"]];
     
@@ -266,40 +316,53 @@
 -(void) upload:(UIButton *)sender{
     
     NSLog(@"upload %ld", sender.tag);
-
+    
     self.imagePicker = [[ImagePickerViewController alloc] init];
+    @weakify(self);
+    [self.imagePicker setCallback:^(id responseObject) {
+        @strongify(self);
+        NSLog(@"completeinfo%@", responseObject);
+        
+        NSString *strUrl = [NSString stringWithFormat:@"%@?%@", responseObject[@"data"][@"url"], @"imageView2/1/w/167/h/100"];
+        
+        if (sender.tag == 0) {
+            self.userViewModel.cardFrontImage = strUrl;
+        }
+        if (sender.tag == 1) {
+            self.userViewModel.cardBackImage = strUrl;
+        }
+        
+        if (sender.tag == 2) {
+            self.userViewModel.cardPersonImage = strUrl;
+        }
+        
+        NSURL* aURL = [NSURL URLWithString: strUrl];
+        NSData* data = [[NSData alloc] initWithContentsOfURL:aURL];
+        
+        UIImage *image = [UIImage imageWithData:data];
+        
+        CGSize size = CGSizeMake(167, 100);
+        
+        UIGraphicsBeginImageContext(size);
+        // 绘制改变大小的图片
+        [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+        // 从当前context中创建一个改变大小后的图片
+        UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+        // 使当前的context出堆栈
+        UIGraphicsEndImageContext();
+        
+        [sender setImage:scaledImage forState:UIControlStateNormal];
+        
+
+        
+    } failure:^(NSError *error) {
+        
+    }];
     
     self.imagePicker.parentCon = self;
     
     [self.imagePicker open];
-
-//    self.actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-//                                                   delegate:self
-//                                          cancelButtonTitle:@"取消"
-//                                     destructiveButtonTitle:nil
-//                                          otherButtonTitles:@"相册", @"拍照", nil];
-////    self.actionSheet.tag = ActionSheetTagAddPhoto;
-//    [self.actionSheet showInView:self.view];
-    
-    
 }
-
-//-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-//
-//    if (0 == buttonIndex)
-//    {
-//        //打开本地相册
-////        [self localPhoto];
-//    }
-//    else if(1 == buttonIndex)
-//    {
-//        // 开始拍照
-////        [self takePhoto];
-//    }
-//    
-//}
-
-
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

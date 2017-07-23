@@ -9,8 +9,14 @@
 #import "ImagePickerViewController.h"
 #import "UserViewModel.h"
 
+
+typedef void(^successBlock)(id responseObject);
+typedef void(^failureBlock)(NSError *error);
+
 @interface ImagePickerViewController ()
 @property (strong, nonatomic) UserViewModel *userViewModel;
+@property (strong, nonatomic) successBlock success;
+@property (strong, nonatomic) failureBlock failure;
 @end
 
 @implementation ImagePickerViewController
@@ -62,7 +68,7 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
-    NSLog(@"info %@", info);
+//    NSLog(@"info %@", info);
     
     [self.parentCon dismissViewControllerAnimated:YES completion:nil];
     
@@ -72,9 +78,19 @@
     NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
     [self.userViewModel upload:imageData success:^(id  _Nullable responseObject) {
         NSLog(@"result success %@", responseObject);
+        
+        self.success(responseObject);
     } failure:^(NSError * _Nullable error) {
-        NSLog(@"result failure %@", error);
+//        NSLog(@"result failure %@", error);
+        self.failure(error);
     }];
+    
+}
+
+-(void)setCallback: (void (^)(id responseObject))success failure:(void (^)(NSError* error))failure
+{
+    self.success = success;
+    self.failure = failure;
     
 }
 

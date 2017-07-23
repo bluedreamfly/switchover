@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E543F241F21C60A00813593 /* CityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F231F21C60A00813593 /* CityViewModel.m */; };
 		2E543F271F21EEEB00813593 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F261F21EEEB00813593 /* ImagePickerViewController.m */; };
+		2E543F2A1F244A3B00813593 /* CheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F291F244A3A00813593 /* CheckViewController.m */; };
+		2E543F2D1F244F6B00813593 /* CheckFailureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F2C1F244F6B00813593 /* CheckFailureViewController.m */; };
 		2ECB055F1F1DEC6700278EE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB055E1F1DEC6700278EE9 /* main.m */; };
 		2ECB05621F1DEC6700278EE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB05611F1DEC6700278EE9 /* AppDelegate.m */; };
 		2ECB05651F1DEC6700278EE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB05641F1DEC6700278EE9 /* ViewController.m */; };
@@ -34,6 +36,10 @@
 		2E543F231F21C60A00813593 /* CityViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewModel.m; sourceTree = "<group>"; };
 		2E543F251F21EEEB00813593 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
 		2E543F261F21EEEB00813593 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
+		2E543F281F244A3A00813593 /* CheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckViewController.h; sourceTree = "<group>"; };
+		2E543F291F244A3A00813593 /* CheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckViewController.m; sourceTree = "<group>"; };
+		2E543F2B1F244F6B00813593 /* CheckFailureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckFailureViewController.h; sourceTree = "<group>"; };
+		2E543F2C1F244F6B00813593 /* CheckFailureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckFailureViewController.m; sourceTree = "<group>"; };
 		2ECB055A1F1DEC6700278EE9 /* Switchover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Switchover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECB055E1F1DEC6700278EE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2ECB05601F1DEC6700278EE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -231,6 +237,10 @@
 				2ECB05961F205B5B00278EE9 /* AuthViewController.h */,
 				2ECB05A21F20A29F00278EE9 /* CompleteInfoViewController.h */,
 				2ECB05A31F20A29F00278EE9 /* CompleteInfoViewController.m */,
+				2E543F281F244A3A00813593 /* CheckViewController.h */,
+				2E543F291F244A3A00813593 /* CheckViewController.m */,
+				2E543F2B1F244F6B00813593 /* CheckFailureViewController.h */,
+				2E543F2C1F244F6B00813593 /* CheckFailureViewController.m */,
 			);
 			name = Auth;
 			sourceTree = "<group>";
@@ -403,6 +413,8 @@
 				2ECB055F1F1DEC6700278EE9 /* main.m in Sources */,
 				2ECB05A01F207FC200278EE9 /* UserViewModel.m in Sources */,
 				2E543F241F21C60A00813593 /* CityViewModel.m in Sources */,
+				2E543F2D1F244F6B00813593 /* CheckFailureViewController.m in Sources */,
+				2E543F2A1F244A3B00813593 /* CheckViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

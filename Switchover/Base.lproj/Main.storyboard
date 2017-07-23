@@ -226,8 +226,113 @@
             </objects>
             <point key="canvasLocation" x="2393" y="27"/>
         </scene>
+        <!--Check View Controller-->
+        <scene sceneID="q3V-20-G4l">
+            <objects>
+                <viewController storyboardIdentifier="checking" id="cGW-Jz-7vr" customClass="CheckViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yau-zH-K3U"/>
+                        <viewControllerLayoutGuide type="bottom" id="XvP-MN-VZX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B26-gn-HO7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="checking" translatesAutoresizingMaskIntoConstraints="NO" id="OUU-oV-ITc">
+                                <rect key="frame" x="150" y="95" width="75" height="75"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="审核中..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAL-gE-0YX">
+                                <rect key="frame" x="154.5" y="190" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的申请已经提交，请耐心等待～" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfE-nF-ErF">
+                                <rect key="frame" x="80" y="231" width="215" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bAL-gE-0YX" firstAttribute="centerX" secondItem="B26-gn-HO7" secondAttribute="centerX" id="AfY-Er-fNV"/>
+                            <constraint firstItem="bAL-gE-0YX" firstAttribute="top" secondItem="OUU-oV-ITc" secondAttribute="bottom" constant="20" id="EhZ-EB-IRP"/>
+                            <constraint firstItem="OUU-oV-ITc" firstAttribute="centerX" secondItem="B26-gn-HO7" secondAttribute="centerX" id="I47-HV-dEn"/>
+                            <constraint firstItem="hfE-nF-ErF" firstAttribute="centerX" secondItem="B26-gn-HO7" secondAttribute="centerX" id="UQs-J4-Zt7"/>
+                            <constraint firstItem="OUU-oV-ITc" firstAttribute="top" secondItem="yau-zH-K3U" secondAttribute="bottom" constant="75" id="pXb-22-GAR"/>
+                            <constraint firstItem="hfE-nF-ErF" firstAttribute="top" secondItem="bAL-gE-0YX" secondAttribute="bottom" constant="20" id="vfx-M7-agn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGm-O4-IsQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3257" y="37"/>
+        </scene>
+        <!--Check Failure View Controller-->
+        <scene sceneID="WNe-AH-hJL">
+            <objects>
+                <viewController storyboardIdentifier="checkFailure" id="H3g-BV-KOG" customClass="CheckFailureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R9X-hG-Olg"/>
+                        <viewControllerLayoutGuide type="bottom" id="oD0-so-y28"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZbB-9W-mxj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="checkFailure" translatesAutoresizingMaskIntoConstraints="NO" id="baw-Kd-yYP">
+                                <rect key="frame" x="150" y="95" width="75" height="75"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="审核失败" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umr-yb-bFi">
+                                <rect key="frame" x="152.5" y="190" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCt-0v-mju">
+                                <rect key="frame" x="44.5" y="231" width="286" height="33.5"/>
+                                <string key="text">很抱歉，由于巴拉巴拉，您的申请无法通过，
+如有问题，请致电客服40033455959</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiF-EB-KpD">
+                                <rect key="frame" x="15" y="294.5" width="345" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ROy-NG-sCX"/>
+                                </constraints>
+                                <state key="normal" title="重新申请"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wiF-EB-KpD" firstAttribute="leading" secondItem="ZbB-9W-mxj" secondAttribute="leading" constant="15" id="Nco-U2-DHg"/>
+                            <constraint firstItem="RCt-0v-mju" firstAttribute="top" secondItem="umr-yb-bFi" secondAttribute="bottom" constant="20" id="PjN-8x-q2u"/>
+                            <constraint firstItem="baw-Kd-yYP" firstAttribute="top" secondItem="R9X-hG-Olg" secondAttribute="bottom" constant="75" id="Uh5-bk-eEm"/>
+                            <constraint firstAttribute="trailing" secondItem="wiF-EB-KpD" secondAttribute="trailing" constant="15" id="Vyb-N9-Hjx"/>
+                            <constraint firstItem="RCt-0v-mju" firstAttribute="centerX" secondItem="ZbB-9W-mxj" secondAttribute="centerX" id="YPc-sU-06O"/>
+                            <constraint firstItem="umr-yb-bFi" firstAttribute="top" secondItem="baw-Kd-yYP" secondAttribute="bottom" constant="20" id="Z9o-s1-0Mu"/>
+                            <constraint firstItem="baw-Kd-yYP" firstAttribute="centerX" secondItem="ZbB-9W-mxj" secondAttribute="centerX" id="bYP-wT-1d6"/>
+                            <constraint firstAttribute="trailing" secondItem="wiF-EB-KpD" secondAttribute="trailing" constant="15" id="e9r-8E-Osh"/>
+                            <constraint firstItem="umr-yb-bFi" firstAttribute="centerX" secondItem="ZbB-9W-mxj" secondAttribute="centerX" id="sqg-d6-Eop"/>
+                            <constraint firstItem="wiF-EB-KpD" firstAttribute="top" secondItem="RCt-0v-mju" secondAttribute="bottom" constant="30" id="ssv-OK-A4B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="reApplyBtn" destination="wiF-EB-KpD" id="GTG-Ao-xb0"/>
+                        <outlet property="tipLabel" destination="RCt-0v-mju" id="SZ6-co-VTT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LhG-gL-est" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4233" y="37"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="checkFailure" width="75" height="75"/>
+        <image name="checking" width="75" height="75"/>
         <image name="logo" width="112" height="38"/>
     </resources>
 </document>
