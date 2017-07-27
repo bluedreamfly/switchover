@@ -44,9 +44,6 @@
     
     self.rightView.backgroundColor = bgColor;
     
-    
-    
-    
     self.tableView = [[UITableView alloc] init];
     self.tableView.tableFooterView = [[UIView alloc] init];
     

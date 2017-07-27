@@ -10,10 +10,20 @@
 #import "Masonry.h"
 #import "AppColor.h"
 #import "UIColor+Hex.h"
-
+#import "UserTableHeaderView.h"
+#import "MonutShowView.h"
+#import "QBUserTableViewCell.h"
+#import "QBUserViewModel.h"
+#import "MyWalletViewController.h"
+#import "HistoryTaskViewController.h"
+#import "BatteryViewController.h"
+#import "ReactiveObjC.h"
 
 @interface UserViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) QBUserViewModel *userViewModel;
+//@property (strong, nonatomic) NSString *money;
+//@property (table)
 @end
 
 @implementation UserViewController
@@ -21,10 +31,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.userViewModel = [[QBUserViewModel alloc] init];
+    
     [self initCodeView];
+    
+    [self initRAC];
+    
+    [self.userViewModel fetchUserInfo];
+    
     // Do any additional setup after loading the view.
 }
 -(void)viewDidAppear:(BOOL)animated {
+    
+//    [self.userViewModel fetchUserInfo];
+//    [self.tableView reloadData];
     
 //    [self.navigationController.navigationBar setBarTintColor: [UIColor colorWithHexString:APP_MAIN_COLOR]];
 //    
@@ -34,9 +54,29 @@
 
 //-(void)viewWillDisappear:(BOOL)animated
 
+
+
+
 -(void)viewWillDisappear:(BOOL)animated {
 
     [self.navigationController.navigationBar setBarTintColor: [UIColor whiteColor]];
+}
+
+
+-(void) initRAC
+{
+    UserTableHeaderView *headerView = (UserTableHeaderView *)self.tableView.tableHeaderView;
+    
+    RAC(headerView.userAvator, image) = RACObserve(self, userViewModel.avatorImage);
+    RAC(headerView.userName, text) = RACObserve(self, userViewModel.userName);
+    RAC(headerView.userType, text) = RACObserve(self, userViewModel.userType);
+    RAC(headerView.monthIncome, text) = RACObserve(self, userViewModel.monthIncome);
+    RAC(headerView.todayIncome, text) = RACObserve(self, userViewModel.todayIncome);
+    RAC(headerView.todayFinishTask, text) = RACObserve(self, userViewModel.todayFinishTasks);
+    RAC(headerView.todaySwitchNum, text) = RACObserve(self, userViewModel.todaySwitchNums);
+    [RACObserve(self, userViewModel.walletAmount) subscribeNext:^(id  _Nullable x) {
+        [self.tableView reloadData];
+    }];
 }
 
 -(void) initCodeView {
@@ -47,16 +87,13 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    UIView *tableHeaderView = [[UIView alloc] init];
+    UserTableHeaderView *tableHeaderView = [[UserTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 292)];
     
+    self.tableView.backgroundColor = [UIColor colorWithHexString:APP_MAIN_BGCOLOR];
     self.tableView.tableHeaderView = tableHeaderView;
-    
-    [self initUserInfo: tableHeaderView];
-    
+    self.tableView.tableFooterView = [[UIView alloc] init];
     
     [self.view addSubview:self.tableView];
-    
-    
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.leading.equalTo(self.view.mas_leading);
@@ -67,72 +104,51 @@
 
 }
 
--(void)initUserInfo: (UIView *)parent {
-    UIButton *userInfoView = [[UIButton alloc] init];
-    
-    [parent addSubview: userInfoView];
-    userInfoView.backgroundColor = [UIColor colorWithHexString:APP_MAIN_COLOR];
-    
-    UIImageView *avatorImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image_picker"]];
-    avatorImageView.contentMode = UIViewContentModeCenter;
-    avatorImageView.backgroundColor = [UIColor whiteColor];
-    avatorImageView.layer.masksToBounds = YES;
-    avatorImageView.layer.cornerRadius = 30;
-    
-    UILabel *userName = [[UILabel alloc] init];
-    userName.text = @"黄祯辉";
-    userName.font = [UIFont systemFontOfSize: 17];
-    userName.textColor = [UIColor whiteColor];
-    
-    UILabel *userType = [[UILabel alloc] init];
-    userType.text = @"官方换电员";
-    userType.font = [UIFont systemFontOfSize: 12];
-    userType.textColor = [UIColor colorWithHexString:@"333333"];
-    userType.backgroundColor = [UIColor whiteColor];
-//    userType.
-    [userInfoView addSubview:avatorImageView];
-    [userInfoView addSubview:userName];
-    [userInfoView addSubview:userType];
-    
-    [userInfoView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(parent.mas_leading);
-        make.top.equalTo(parent.mas_top);
-        make.trailing.equalTo(parent.mas_trailing);
-        make.height.equalTo(@92);
-    }];
-    
-    
-    [avatorImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(userInfoView.mas_top).offset(11.5);
-        make.leading.equalTo(userInfoView.mas_leading).offset(30);
-        make.width.equalTo(@60);
-        make.height.equalTo(@60);
-    }];
-    
-    [userName mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(userInfoView.mas_top).offset(19.05);
-        make.leading.equalTo(avatorImageView.mas_trailing).offset(15);
-    }];
-    
-    [userType mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(userName.mas_bottom).offset(5.5);
-        make.leading.equalTo(avatorImageView.mas_trailing).offset(15);
-    }];
-}
-
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *QBCellId = @"QBCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:QBCellId];
+    static NSString *QBCellId = @"QBUserCell";
+    QBUserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:QBCellId];
     if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:QBCellId];
+        cell = [[QBUserTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:QBCellId];
     }
     
-//    cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.textLabel.text = @"hahah";
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    cell.title.text = self.userViewModel.linkList[indexPath.row][@"title"];
+    cell.frontImageView.image = [UIImage imageNamed:self.userViewModel.linkList[indexPath.row][@"frontImage"]];
+    
+    cell.afterImageView.image = [UIImage imageNamed:@"jump_arrow_icon"];
+    
+    NSNumber *money = self.userViewModel.walletAmount;
+    if (indexPath.row == 0 && money != nil) {
+        
+        if ([money doubleValue] < 0) {
+            cell.des.textColor = [UIColor redColor];
+        }
+        cell.des.text = [NSString stringWithFormat:@"%@%@", money, @"元"];
+    }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row == 0) {
+        MyWalletViewController *myWalletController = [self.storyboard instantiateViewControllerWithIdentifier:@"myWallet"];
+        [self.navigationController pushViewController:myWalletController animated:YES];
+    }
+    
+    if (indexPath.row == 1) {
+        HistoryTaskViewController *historyTaskController = [[HistoryTaskViewController alloc] init];
+        [self.navigationController pushViewController:historyTaskController animated:YES];
+    }
+    
+
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -144,14 +160,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

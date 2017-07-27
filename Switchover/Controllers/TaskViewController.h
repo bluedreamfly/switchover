@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface TaskViewController : BaseViewController
+@interface TaskViewController : UIViewController
 
 @end

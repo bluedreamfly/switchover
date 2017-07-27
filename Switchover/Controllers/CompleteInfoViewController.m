@@ -80,8 +80,8 @@
         if ([responseObject[@"status"] intValue] == 0) {
 //            CheckViewController *checkController = [[CheckViewController alloc] init];
             
-            CheckViewController *checkController =  [self.storyboard instantiateViewControllerWithIdentifier:@"checking"];
-            
+//            CheckViewController *checkController =  [self.storyboard instantiateViewControllerWithIdentifier:@"checking"];
+//            
             CheckFailureViewController *checkFailure = [
                                                         self.storyboard instantiateViewControllerWithIdentifier:@"checkFailure"];
             

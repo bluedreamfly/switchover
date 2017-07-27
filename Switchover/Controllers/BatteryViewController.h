@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface BatteryViewController : BaseViewController
+@interface BatteryViewController : UIViewController
 
 @end

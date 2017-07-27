@@ -14,6 +14,10 @@
 		2E543F301F24720800813593 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F2F1F24720800813593 /* TaskViewController.m */; };
 		2E543F341F24763C00813593 /* BatteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F331F24763C00813593 /* BatteryViewController.m */; };
 		2E543F371F24933D00813593 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F361F24933D00813593 /* UserViewController.m */; };
+		2E543F3C1F257A8600813593 /* UserTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F3B1F257A8600813593 /* UserTableHeaderView.m */; };
+		2E543F3F1F258F5A00813593 /* MonutShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F3E1F258F5A00813593 /* MonutShowView.m */; };
+		2E543F421F25BFE900813593 /* QBUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F411F25BFE900813593 /* QBUserTableViewCell.m */; };
+		2E543F461F25C7FF00813593 /* QBUserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E543F451F25C7FF00813593 /* QBUserViewModel.m */; };
 		2ECB055F1F1DEC6700278EE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB055E1F1DEC6700278EE9 /* main.m */; };
 		2ECB05621F1DEC6700278EE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB05611F1DEC6700278EE9 /* AppDelegate.m */; };
 		2ECB05651F1DEC6700278EE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB05641F1DEC6700278EE9 /* ViewController.m */; };
@@ -31,6 +35,17 @@
 		2ECB05A41F20A29F00278EE9 /* CompleteInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB05A31F20A29F00278EE9 /* CompleteInfoViewController.m */; };
 		2ECB05AA1F20DF8100278EE9 /* QBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB05A91F20DF8100278EE9 /* QBTableViewCell.m */; };
 		2ECB05AD1F21908B00278EE9 /* SelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB05AC1F21908B00278EE9 /* SelectCityViewController.m */; };
+		2EECE6081F25E10200952362 /* LinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE6071F25E10200952362 /* LinkButton.m */; };
+		2EECE60B1F25EA7100952362 /* MyWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE60A1F25EA7100952362 /* MyWalletViewController.m */; };
+		2EECE60E1F26140E00952362 /* MyWalletDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE60D1F26140E00952362 /* MyWalletDetailViewController.m */; };
+		2EECE6111F26D9EE00952362 /* UIViewController+Aop.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE6101F26D9EE00952362 /* UIViewController+Aop.m */; };
+		2EECE6141F272B6800952362 /* CustomUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE6131F272B6800952362 /* CustomUtil.m */; };
+		2EECE6171F273C8100952362 /* HistoryTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE6161F273C8100952362 /* HistoryTaskViewController.m */; };
+		2EECE61A1F2740AF00952362 /* HistoryTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE6191F2740AF00952362 /* HistoryTaskTableViewCell.m */; };
+		2EECE61D1F2746F200952362 /* QBSperatorLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE61C1F2746F200952362 /* QBSperatorLine.m */; };
+		2EECE6231F27764700952362 /* HistoryTaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE6221F27764700952362 /* HistoryTaskDetailViewController.m */; };
+		2EECE6261F281E0E00952362 /* TaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE6251F281E0E00952362 /* TaskModel.m */; };
+		2EECE6291F28768300952362 /* HistoryTaskViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE6281F28768300952362 /* HistoryTaskViewModel.m */; };
 		436D622F79C713D207647FC8 /* Pods_Switchover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F429D2EB2CCC4591D55FF038 /* Pods_Switchover.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +64,14 @@
 		2E543F331F24763C00813593 /* BatteryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryViewController.m; sourceTree = "<group>"; };
 		2E543F351F24933D00813593 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		2E543F361F24933D00813593 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		2E543F3A1F257A8600813593 /* UserTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableHeaderView.h; sourceTree = "<group>"; };
+		2E543F3B1F257A8600813593 /* UserTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableHeaderView.m; sourceTree = "<group>"; };
+		2E543F3D1F258F5A00813593 /* MonutShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonutShowView.h; sourceTree = "<group>"; };
+		2E543F3E1F258F5A00813593 /* MonutShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonutShowView.m; sourceTree = "<group>"; };
+		2E543F401F25BFE900813593 /* QBUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBUserTableViewCell.h; sourceTree = "<group>"; };
+		2E543F411F25BFE900813593 /* QBUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBUserTableViewCell.m; sourceTree = "<group>"; };
+		2E543F441F25C7FF00813593 /* QBUserViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBUserViewModel.h; sourceTree = "<group>"; };
+		2E543F451F25C7FF00813593 /* QBUserViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBUserViewModel.m; sourceTree = "<group>"; };
 		2ECB055A1F1DEC6700278EE9 /* Switchover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Switchover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECB055E1F1DEC6700278EE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2ECB05601F1DEC6700278EE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +104,28 @@
 		2ECB05A91F20DF8100278EE9 /* QBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBTableViewCell.m; sourceTree = "<group>"; };
 		2ECB05AB1F21908B00278EE9 /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityViewController.h; sourceTree = "<group>"; };
 		2ECB05AC1F21908B00278EE9 /* SelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCityViewController.m; sourceTree = "<group>"; };
+		2EECE6061F25E10200952362 /* LinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkButton.h; sourceTree = "<group>"; };
+		2EECE6071F25E10200952362 /* LinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkButton.m; sourceTree = "<group>"; };
+		2EECE6091F25EA7100952362 /* MyWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWalletViewController.h; sourceTree = "<group>"; };
+		2EECE60A1F25EA7100952362 /* MyWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWalletViewController.m; sourceTree = "<group>"; };
+		2EECE60C1F26140E00952362 /* MyWalletDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWalletDetailViewController.h; sourceTree = "<group>"; };
+		2EECE60D1F26140E00952362 /* MyWalletDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWalletDetailViewController.m; sourceTree = "<group>"; };
+		2EECE60F1F26D9EE00952362 /* UIViewController+Aop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Aop.h"; sourceTree = "<group>"; };
+		2EECE6101F26D9EE00952362 /* UIViewController+Aop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Aop.m"; sourceTree = "<group>"; };
+		2EECE6121F272B6800952362 /* CustomUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUtil.h; sourceTree = "<group>"; };
+		2EECE6131F272B6800952362 /* CustomUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUtil.m; sourceTree = "<group>"; };
+		2EECE6151F273C8100952362 /* HistoryTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTaskViewController.h; sourceTree = "<group>"; };
+		2EECE6161F273C8100952362 /* HistoryTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTaskViewController.m; sourceTree = "<group>"; };
+		2EECE6181F2740AF00952362 /* HistoryTaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTaskTableViewCell.h; sourceTree = "<group>"; };
+		2EECE6191F2740AF00952362 /* HistoryTaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTaskTableViewCell.m; sourceTree = "<group>"; };
+		2EECE61B1F2746F200952362 /* QBSperatorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBSperatorLine.h; sourceTree = "<group>"; };
+		2EECE61C1F2746F200952362 /* QBSperatorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBSperatorLine.m; sourceTree = "<group>"; };
+		2EECE6211F27764700952362 /* HistoryTaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTaskDetailViewController.h; sourceTree = "<group>"; };
+		2EECE6221F27764700952362 /* HistoryTaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTaskDetailViewController.m; sourceTree = "<group>"; };
+		2EECE6241F281E0E00952362 /* TaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskModel.h; sourceTree = "<group>"; };
+		2EECE6251F281E0E00952362 /* TaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskModel.m; sourceTree = "<group>"; };
+		2EECE6271F28768300952362 /* HistoryTaskViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTaskViewModel.h; sourceTree = "<group>"; };
+		2EECE6281F28768300952362 /* HistoryTaskViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTaskViewModel.m; sourceTree = "<group>"; };
 		BF63F9F5190223DB348902A5 /* Pods-Switchover.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Switchover.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Switchover/Pods-Switchover.debug.xcconfig"; sourceTree = "<group>"; };
 		F03A3540C584093F0DEC5815 /* Pods-Switchover.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Switchover.release.xcconfig"; path = "Pods/Target Support Files/Pods-Switchover/Pods-Switchover.release.xcconfig"; sourceTree = "<group>"; };
 		F429D2EB2CCC4591D55FF038 /* Pods_Switchover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Switchover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,8 +156,35 @@
 			children = (
 				2E543F351F24933D00813593 /* UserViewController.h */,
 				2E543F361F24933D00813593 /* UserViewController.m */,
+				2EECE6091F25EA7100952362 /* MyWalletViewController.h */,
+				2EECE60A1F25EA7100952362 /* MyWalletViewController.m */,
+				2EECE60C1F26140E00952362 /* MyWalletDetailViewController.h */,
+				2EECE60D1F26140E00952362 /* MyWalletDetailViewController.m */,
+				2EECE6151F273C8100952362 /* HistoryTaskViewController.h */,
+				2EECE6161F273C8100952362 /* HistoryTaskViewController.m */,
+				2EECE6211F27764700952362 /* HistoryTaskDetailViewController.h */,
+				2EECE6221F27764700952362 /* HistoryTaskDetailViewController.m */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		2E543F391F25799800813593 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2E543F431F25C7DC00813593 /* user */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2E543F431F25C7DC00813593 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				2E543F441F25C7FF00813593 /* QBUserViewModel.h */,
+				2E543F451F25C7FF00813593 /* QBUserViewModel.m */,
+				2EECE6271F28768300952362 /* HistoryTaskViewModel.h */,
+				2EECE6281F28768300952362 /* HistoryTaskViewModel.m */,
+			);
+			name = user;
 			sourceTree = "<group>";
 		};
 		2ECB05511F1DEC6700278EE9 = {
@@ -136,6 +208,7 @@
 		2ECB055C1F1DEC6700278EE9 /* Switchover */ = {
 			isa = PBXGroup;
 			children = (
+				2E543F391F25799800813593 /* ViewModels */,
 				2ECB05A11F2083E100278EE9 /* Networking */,
 				2ECB05861F1F325C00278EE9 /* Config */,
 				2ECB05771F1DF4B100278EE9 /* Helpers */,
@@ -172,6 +245,8 @@
 				2ECB059F1F207FC200278EE9 /* UserViewModel.m */,
 				2E543F221F21C60A00813593 /* CityViewModel.h */,
 				2E543F231F21C60A00813593 /* CityViewModel.m */,
+				2EECE6241F281E0E00952362 /* TaskModel.h */,
+				2EECE6251F281E0E00952362 /* TaskModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +274,10 @@
 			children = (
 				2ECB05831F1EE50200278EE9 /* UIColor+Hex.h */,
 				2ECB05841F1EE50200278EE9 /* UIColor+Hex.m */,
+				2EECE60F1F26D9EE00952362 /* UIViewController+Aop.h */,
+				2EECE6101F26D9EE00952362 /* UIViewController+Aop.m */,
+				2EECE6121F272B6800952362 /* CustomUtil.h */,
+				2EECE6131F272B6800952362 /* CustomUtil.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -234,6 +313,16 @@
 				2ECB057D1F1E069D00278EE9 /* QBTextField.h */,
 				2ECB05A81F20DF8100278EE9 /* QBTableViewCell.h */,
 				2ECB05A91F20DF8100278EE9 /* QBTableViewCell.m */,
+				2E543F3D1F258F5A00813593 /* MonutShowView.h */,
+				2E543F3E1F258F5A00813593 /* MonutShowView.m */,
+				2E543F401F25BFE900813593 /* QBUserTableViewCell.h */,
+				2E543F411F25BFE900813593 /* QBUserTableViewCell.m */,
+				2EECE6061F25E10200952362 /* LinkButton.h */,
+				2EECE6071F25E10200952362 /* LinkButton.m */,
+				2EECE6181F2740AF00952362 /* HistoryTaskTableViewCell.h */,
+				2EECE6191F2740AF00952362 /* HistoryTaskTableViewCell.m */,
+				2EECE61B1F2746F200952362 /* QBSperatorLine.h */,
+				2EECE61C1F2746F200952362 /* QBSperatorLine.m */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -241,6 +330,8 @@
 		2ECB05921F20371100278EE9 /* page */ = {
 			isa = PBXGroup;
 			children = (
+				2E543F3A1F257A8600813593 /* UserTableHeaderView.h */,
+				2E543F3B1F257A8600813593 /* UserTableHeaderView.m */,
 			);
 			name = page;
 			sourceTree = "<group>";
@@ -415,24 +506,39 @@
 				2E543F371F24933D00813593 /* UserViewController.m in Sources */,
 				2E543F341F24763C00813593 /* BatteryViewController.m in Sources */,
 				2ECB05951F204E3400278EE9 /* LoginViewModel.m in Sources */,
+				2EECE6231F27764700952362 /* HistoryTaskDetailViewController.m in Sources */,
 				2ECB059D1F205CA400278EE9 /* BaseViewController.m in Sources */,
+				2EECE6111F26D9EE00952362 /* UIViewController+Aop.m in Sources */,
 				2ECB057C1F1DF62400278EE9 /* LoginViewController.m in Sources */,
 				2ECB05A41F20A29F00278EE9 /* CompleteInfoViewController.m in Sources */,
 				2ECB05851F1EE50200278EE9 /* UIColor+Hex.m in Sources */,
 				2ECB05AD1F21908B00278EE9 /* SelectCityViewController.m in Sources */,
+				2E543F461F25C7FF00813593 /* QBUserViewModel.m in Sources */,
 				2E543F271F21EEEB00813593 /* ImagePickerViewController.m in Sources */,
 				2ECB05651F1DEC6700278EE9 /* ViewController.m in Sources */,
 				2ECB05981F205B5B00278EE9 /* AuthViewController.m in Sources */,
 				2ECB05901F1F341C00278EE9 /* AppColor.m in Sources */,
 				2ECB057F1F1E069D00278EE9 /* QBTextField.m in Sources */,
+				2E543F421F25BFE900813593 /* QBUserTableViewCell.m in Sources */,
+				2EECE6261F281E0E00952362 /* TaskModel.m in Sources */,
+				2EECE6291F28768300952362 /* HistoryTaskViewModel.m in Sources */,
 				2ECB05AA1F20DF8100278EE9 /* QBTableViewCell.m in Sources */,
 				2ECB05621F1DEC6700278EE9 /* AppDelegate.m in Sources */,
+				2E543F3C1F257A8600813593 /* UserTableHeaderView.m in Sources */,
+				2EECE60E1F26140E00952362 /* MyWalletDetailViewController.m in Sources */,
 				2ECB055F1F1DEC6700278EE9 /* main.m in Sources */,
 				2ECB05A01F207FC200278EE9 /* UserViewModel.m in Sources */,
 				2E543F241F21C60A00813593 /* CityViewModel.m in Sources */,
+				2EECE60B1F25EA7100952362 /* MyWalletViewController.m in Sources */,
 				2E543F301F24720800813593 /* TaskViewController.m in Sources */,
+				2E543F3F1F258F5A00813593 /* MonutShowView.m in Sources */,
+				2EECE6141F272B6800952362 /* CustomUtil.m in Sources */,
+				2EECE6081F25E10200952362 /* LinkButton.m in Sources */,
 				2E543F2D1F244F6B00813593 /* CheckFailureViewController.m in Sources */,
+				2EECE61A1F2740AF00952362 /* HistoryTaskTableViewCell.m in Sources */,
+				2EECE61D1F2746F200952362 /* QBSperatorLine.m in Sources */,
 				2E543F2A1F244A3B00813593 /* CheckViewController.m in Sources */,
+				2EECE6171F273C8100952362 /* HistoryTaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

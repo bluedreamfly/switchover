@@ -77,4 +77,16 @@
     }];
 
 }
+
+-(void) getUserInfo:(void (^)(id _Nullable))success failure:(void (^)(NSError * _Nullable))failure
+{
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    [session GET:@"http://api.test.com/user/info" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+
+}
+
 @end

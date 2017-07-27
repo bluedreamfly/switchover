@@ -54,7 +54,7 @@
 
 -(void) pushUser {
 
-    UserViewController *userController = [[UserViewController alloc] init];
+    UserViewController *userController = [self.storyboard instantiateViewControllerWithIdentifier:@"user"];
     
     [self.navigationController pushViewController:userController animated:YES];
 }

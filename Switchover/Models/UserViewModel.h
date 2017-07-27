@@ -28,7 +28,6 @@
 -(void) authenticate:(nullable void (^)(id _Nullable responseObject))success
              failure:(nullable void (^)(NSError * _Nullable error))failure;
 
-
 //身份核实
 -(void) checkAuth: (nullable void (^)(id _Nullable responseObject))success
              failure:(nullable void (^)(NSError * _Nullable error))failure;
@@ -36,4 +35,8 @@
 //图片上传
 -(void) upload: (NSData *_Nullable)imageData success: (nullable void (^)(id _Nullable responseObject))success
              failure:(nullable void (^)(NSError * _Nullable error))failure;
+
+//获取用户信息
+-(void) getUserInfo: (nullable void (^)(id _Nullable responseObject))success
+            failure:(nullable void (^)(NSError * _Nullable error))failure;
 @end

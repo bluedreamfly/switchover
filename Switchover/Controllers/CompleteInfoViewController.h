@@ -9,6 +9,6 @@
 #import "BaseViewController.h"
 #import "CityViewModel.h"
 
-@interface CompleteInfoViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
+@interface CompleteInfoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 @property (strong, nonatomic, readwrite) CityViewModel *city;
 @end
